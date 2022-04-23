@@ -10,7 +10,7 @@ url = 'https://ingatlan.com/lista/elado+lakas+budapest/'
 headers = {'User-Agent':'Mozilla/5.0'}
 
 def getdata(url):
-	max_pages = 2
+	max_pages = 1290
 	current_page = 1
 	tablelist = []
 	while current_page <= max_pages:
@@ -32,7 +32,7 @@ def getdata(url):
 			print(f'Price: {price} | Address: {address} | Size: {size} | Rooms: {rooms} | Balcony: {balcony}')
 			parameterek = {'Price': price, 'Address': address, 'Size': size, 'Rooms': rooms, 'Balcony': balcony}
 			tablelist.append(parameterek)
-		time.sleep(5)
+		time.sleep(2)
 		current_page += 1
 	return tablelist
 
